@@ -37,10 +37,10 @@ export default {
 
   methods: {
     handleSubmit: function () {
-      console.log('Prenom : '.this.prenom)
-      console.log('Nom : '.this.nom)
-      console.log('Societe : '.this.societe)
-      router.go(-1)
+      console.log('Prenom : ' + this.prenom)
+      console.log('Nom : ' + this.nom)
+      console.log('Societe : ' + this.societe)
+      router.replace('/questionnaire')
     }
   }
 }
