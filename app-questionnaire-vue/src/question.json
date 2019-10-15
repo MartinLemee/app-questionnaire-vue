@@ -1,0 +1,25 @@
+{
+    "title": "App questionnaire",
+    "questions": [
+        {
+            "text": "Question 1 ?",
+            "type": "mc",
+            "answers": [
+                "Rep 1",
+                "Rep 2",
+                "Rep 3"
+            ],
+            "answer": "Rep 2"
+        },
+        {
+            "text": "Question 2 ?",
+            "type": "mc",
+            "answers": [
+                "Rep 1",
+                "Rep 2",
+                "Rep 3"
+            ],
+            "answer": "Rep 3"
+        }
+    ]
+}

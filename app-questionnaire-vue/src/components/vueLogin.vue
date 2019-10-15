@@ -15,7 +15,7 @@
              <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Commencer le test</button>
         </fieldset>
     </form>
-</div>
+  </div>
 </template>
 
 <script>
