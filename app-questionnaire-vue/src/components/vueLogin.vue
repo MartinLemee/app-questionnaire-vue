@@ -1,4 +1,37 @@
+<template>
+    <div class="container">
+    <form id="contact"  method="post">
+        <h3> {{ msg }} </h3>
+        <fieldset>
+            <input placeholder="Prénom" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Nom" type="text" tabindex="2" required>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Nom de société" type="text" tabindex="3" required>
+        </fieldset>
+        <fieldset>
+             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Commencer le test</button>
+             <router-link name="submit" to="/questionnaire">Commencer le test</router-link>
+        </fieldset>
+    </form>
+</div>
+</template>
+
+<script>
+export default {
+
+  name: 'vueLogin',
+  props: {
+    msg: String
+  }
+}
+</script>
+
+<style>
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +41,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
@@ -95,7 +127,7 @@ fieldset {
   resize: none;
 }
 
-#contact button[type="submit"] {
+#contact button {
   cursor: pointer;
   width: 100%;
   border: none;
@@ -142,3 +174,5 @@ fieldset {
 :-ms-input-placeholder {
   color: #888;
 }
+
+</style>
