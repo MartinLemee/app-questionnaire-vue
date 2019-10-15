@@ -1,32 +1,50 @@
 <template>
     <div class="container">
-    <form id="contact"  method="post">
+    <form id="contact" @submit.prevent="handleSubmit">
         <h3> {{ msg }} </h3>
         <fieldset>
-            <input placeholder="Prénom" type="text" tabindex="1" required autofocus>
+            <input placeholder="Prénom" type="text" v-model="prenom" tabindex="1" required autofocus>
         </fieldset>
         <fieldset>
-            <input placeholder="Nom" type="text" tabindex="2" required>
+            <input placeholder="Nom" type="text" v-model="nom" tabindex="2" required>
         </fieldset>
         <fieldset>
-            <input placeholder="Nom de société" type="text" tabindex="3" required>
+            <input placeholder="Nom de société" type="text" v-model="societe" tabindex="3" required>
         </fieldset>
         <fieldset>
              <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Commencer le test</button>
-             <router-link name="submit" to="/questionnaire">Commencer le test</router-link>
         </fieldset>
     </form>
 </div>
 </template>
 
 <script>
+import router from '../router'
 export default {
 
   name: 'vueLogin',
   props: {
     msg: String
+  },
+
+  data: function () {
+    return {
+      prenom: '',
+      nom: '',
+      societe: ''
+    }
+  },
+
+  methods: {
+    handleSubmit: function () {
+      console.log('Prenom : '.this.prenom)
+      console.log('Nom : '.this.nom)
+      console.log('Societe : '.this.societe)
+      router.go(-1)
+    }
   }
 }
+
 </script>
 
 <style>
