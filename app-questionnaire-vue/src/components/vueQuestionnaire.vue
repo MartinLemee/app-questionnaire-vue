@@ -1,12 +1,14 @@
 <template>
    <div class="container">
       <form id="contact">
-        <h2>{{ questions[i].question }}</h2>
         <fieldset>
-          <div v-for="prop in questions[i].propositions" >
-          <input type="radio" v-model="selected" v-bind:value="prop" >
-          {{ prop }}
-          </div>
+        <h2>{{ questions[i].question }}</h2>
+        </fieldset>
+        <fieldset>
+          <label class="container-radio" v-for="prop in questions[i].propositions" > 
+            <input type="radio" name="radio" v-model="selected" v-bind:value="prop" >
+            <span class="checkmark"></span>{{ prop }}
+          </label>
         </fieldset>
         <div>Selected: <strong>{{ selected }}</strong></div>
       </form>
@@ -47,7 +49,7 @@ export default {
         this.form.score++;
       }
       if ( this.selected != '') {
-        if (this.i < 11) {
+        if (this.i < 10) {
           this.i++
         } else {
           this.$router.push({ name : 'resultat', params: this.form})

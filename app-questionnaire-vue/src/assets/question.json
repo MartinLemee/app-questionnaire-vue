@@ -1,25 +1,60 @@
 [
      {
-        "question" : "Question 1",
-        "propositions" : ["Rep1", "Rep2", "Rep3"],
-        "reponse" : "Rep2"
+        "question" : "Le café c'est pas mal",
+        "propositions" : ["oui", "ça va", "bof"],
+        "reponse" : "oui"
     },
 
     {
-        "question" : "Question 2",
-        "propositions" : ["Rep1", "Rep2", "Rep3"],
-        "reponse" : "Rep3"
+        "question" : "Le thé c'est encore mieux",
+        "propositions" : ["oui!", "oui", "certainement"],
+        "reponse" : "oui!"
     },
     {
-        "question" : "Question 3",
-        "propositions" : ["Rep1", "Rep2", "Rep3"],
-        "reponse" : "Rep2"
+        "question" : "Le python c'est :",
+        "propositions" : ["Pas mal", "Pas si bien que ça", "Cool"],
+        "reponse" : "Pas si bien que ça"
     },
 
     {
-        "question" : "Question 4",
-        "propositions" : ["Rep1", "Rep2", "Rep3"],
+        "question" : "Quel studio à adapté Houseki no kuni",
+        "propositions" : ["Kyoto Animation", "MadHouse", "Orange"],
+        "reponse" : "Orange"
+    },
+    {
+        "question" : "Qui a créée minecraft ?",
+        "propositions" : ["Notch", "Hatsune Miku", "Jeb"],
+        "reponse" : "Hatsune Miku"
+    },
+    {
+        "question" : "VueJS c'est :",
+        "propositions" : ["Nul ", "Vraiment bien :)", "ça passe"],
+        "reponse" : "Vraiment bien :)"
+    },
+    {
+        "question" : "Le monde..",
+        "propositions" : ["le temps s'arrête", "rien ne va", "tout peut aller au mieux"],
+        "reponse" : "le temps s'arrête"
+    },
+    {
+        "question" : "Salut à tous",
+        "propositions" : ["les copains", "les amis", "les camarades"],
+        "reponse" : "les amis"
+    },
+    {
+        "question" : "Attention",
+        "propositions" : ["les oreilles", "la bouche", "les yeux"],
         "reponse" : "Rep3"
+    },
+    {
+        "question" : "J'ai plus trop d'idées",
+        "propositions" : ["Ah, ça tombe mal", "Nullos va", "Ca arrive t'en fais pas"],
+        "reponse" : "Nullos va"
+    },
+    {
+        "question" : "Sur une echelle de 1 à 28, combien je pense avoir ?",
+        "propositions" : ["Non", "1", "28"],
+        "reponse" : "Non"
     }
 ]
 
