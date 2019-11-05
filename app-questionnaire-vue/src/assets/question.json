@@ -1,0 +1,25 @@
+[
+     {
+        "question" : "Question 1",
+        "propositions" : ["Rep1", "Rep2", "Rep3"],
+        "reponse" : "Rep2"
+    },
+
+    {
+        "question" : "Question 2",
+        "propositions" : ["Rep1", "Rep2", "Rep3"],
+        "reponse" : "Rep3"
+    },
+    {
+        "question" : "Question 3",
+        "propositions" : ["Rep1", "Rep2", "Rep3"],
+        "reponse" : "Rep2"
+    },
+
+    {
+        "question" : "Question 4",
+        "propositions" : ["Rep1", "Rep2", "Rep3"],
+        "reponse" : "Rep3"
+    }
+]
+

@@ -1,6 +1,6 @@
 <template>
   <div class="questionnaire">
-    <vueQuestionnaire msg="App Questionnaire"/>
+    <vueQuestionnaire/>
   </div>
 </template>
 

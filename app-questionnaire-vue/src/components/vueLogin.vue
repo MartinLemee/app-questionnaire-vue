@@ -1,18 +1,18 @@
 <template>
     <div class="container">
-    <form id="contact" @submit.prevent="handleSubmit">
+    <form id="contact" @submit="onSubmit" @reset="onReset" v-if="show">
         <h3> {{ msg }} </h3>
         <fieldset>
-            <input placeholder="Prénom" type="text" v-model="prenom" tabindex="1" required autofocus>
+            <input placeholder="Prénom" type="text" v-model="form.prenom" tabindex="1" required autofocus>
         </fieldset>
         <fieldset>
-            <input placeholder="Nom" type="text" v-model="nom" tabindex="2" required>
+            <input placeholder="Nom" type="text" v-model="form.nom" tabindex="2" required>
         </fieldset>
         <fieldset>
-            <input placeholder="Nom de société" type="text" v-model="societe" tabindex="3" required>
+            <input placeholder="Nom de société" type="text" v-model="form.societe" tabindex="3" required>
         </fieldset>
         <fieldset>
-             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Commencer le test</button>
+             <button name="submit" type="submit" @click="onSubmit" >Commencer le test</button>
         </fieldset>
     </form>
   </div>
@@ -29,18 +29,35 @@ export default {
 
   data: function () {
     return {
-      prenom: '',
-      nom: '',
-      societe: ''
+      form: {
+        prenom: '',
+        nom: '',
+        societe: ''
+      }, 
+      show: true
     }
   },
 
+  // Methode de connexion avec le prenom,nom,societe
   methods: {
-    handleSubmit: function () {
+    onSubmit(evt) {
       console.log('Prenom : ' + this.prenom)
       console.log('Nom : ' + this.nom)
       console.log('Societe : ' + this.societe)
-      router.replace('/questionnaire')
+
+      evt.preventDefault()
+      this.$router.push({ name: 'questionnaire', params: this.form})
+    },
+    onReset(evt) {
+      // Reset par défaut de nos données
+      evt.preventDefault()
+      this.form.prenom= ''
+      this.form.nom= ''
+      this.form.societe= ''
+      this.show= false
+      this.$nextTick(() => {
+        this.show = true
+      })
     }
   }
 }
