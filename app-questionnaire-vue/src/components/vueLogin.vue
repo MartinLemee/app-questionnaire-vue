@@ -41,12 +41,13 @@ export default {
   // Methode de connexion avec le prenom,nom,societe
   methods: {
     onSubmit(evt) {
+      // Log de test pour voir la récupération des saisies
       console.log('Prenom : ' + this.prenom)
       console.log('Nom : ' + this.nom)
       console.log('Societe : ' + this.societe)
 
       evt.preventDefault()
-      this.$router.push({ name: 'questionnaire', params: this.form})
+      this.$router.push({ name: 'questionnaire', params: this.form}) // Push vers le questionnaire
     },
     onReset(evt) {
       // Reset par défaut de nos données
